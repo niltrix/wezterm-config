@@ -49,9 +49,9 @@ local keys = {
    },
 
    -- cursor movement --
-   { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\u{1b}OH' },
-   { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\u{1b}OF' },
-   { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
+   { key = 'LeftArrow',  mods = mod.SUPER_REV,     action = act.SendString '\u{1b}OH' },
+   { key = 'RightArrow', mods = mod.SUPER_REV,     action = act.SendString '\u{1b}OF' },
+   { key = 'Backspace',  mods = mod.SUPER_REV,     action = act.SendString '\u{15}' },
 
    -- copy/paste --
    -- { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
@@ -62,7 +62,7 @@ local keys = {
    -- tabs --
    -- tabs: spawn+close
    { key = 't',          mods = mod.SUPER,     action = act.SpawnTab('DefaultDomain') },
-   { key = 't',          mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'WSL:Ubuntu' }) },
+   { key = 't',          mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'ubuntu.ssh' }) },
    { key = 'w',          mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
